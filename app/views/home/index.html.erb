@@ -1,0 +1,13 @@
+<h1>Check if your number is even!</h1>
+
+<% if @query.nil? %>
+    <p>Please enter a number:</p>
+<% else %>
+    <p><%= @query %> is even?: <strong><%= @res %></strong></p>
+<% end %>
+
+<%= form_with url: root_path, method: :get do |form| %>
+    <%= form.text_field :query %>
+    <%= form.submit "Check" %>
+<% end %>
+
